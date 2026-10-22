@@ -69,7 +69,7 @@ Lab5Web/
 
 1. **Unduh atau Kloning Repository:**
    ```bash
-   git clone https://github.com/kartikajuliana/Lab5Web.git
+   git clone https://github.com/kartika573/Lab5Web.git
    cd Lab5Web
    ```
 2. **Membuka Halaman Utama:**
