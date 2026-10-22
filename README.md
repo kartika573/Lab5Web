@@ -40,9 +40,18 @@ Lab5Web/
 ├── kalkulator.js                  # Logika perhitungan, validasi, dan kontrol UI kalkulator
 ├── style.css                      # Tata letak dan gaya visual antarmuka web
 ├── Laporan_Praktikum5_312310267.pdf # Dokumen Laporan Lengkap Praktikum 5
-├── screenshots/                   # Berkas tangkapan layar asli dari peramban (1280x820)
+├── screenshots/                   # Berkas tangkapan layar peramban
 │   ├── 01_latihan1_output.png
+│   ├── 02a_latihan2_prompt.png
+│   ├── 02b_latihan2_alert.png
+│   ├── 02c_latihan2_kosong.png
 │   ├── 03_latihan3_operasi.png
+│   ├── 04a_latihan4_prompt.png
+│   ├── 04b_latihan4_lulus.png
+│   ├── 04c_latihan4_belum_lulus.png
+│   ├── 04d_latihan4_tidak_valid.png
+│   ├── 05a_latihan5_prompt.png
+│   ├── 05b_latihan5_hasil.png
 │   ├── 06a_latihan6_genap.png
 │   ├── 06b_latihan6_ganjil.png
 │   ├── 06c_latihan6_tidak_valid.png
@@ -128,11 +137,13 @@ Lab5Web/
   | **Batal/Cancel** | Klik tombol Batal/Cancel | `null` | `"Nama belum diisi."` | Tetap tidak berubah | **LULUS** |
   | **String Kosong**| Kosongkan kolom lalu klik OK | `""` | `"Nama belum diisi."` | Tetap tidak berubah | **LULUS** |
 
-> **Catatan Pengambilan Screenshot Dialog Native:**  
-> Berdasarkan prinsip integritas data, kotak dialog native browser OS (`alert()` dan `prompt()`) bersifat modal sistem yang memblokir render thread peramban. Sesuai instruksi praktikum, gambar tidak dimanipulasi:
-> - *[Screenshot akan ditambahkan manual: `02a_latihan2_prompt.png` - Kotak prompt nama]*
-> - *[Screenshot akan ditambahkan manual: `02b_latihan2_alert.png` - Alert "Halo, Kartika!" & teks halaman terbarui]*
-> - *[Screenshot akan ditambahkan manual: `02c_latihan2_kosong.png` - Alert "Nama belum diisi."]*
+- **Tangkapan Layar:**
+  - *Gambar 4.2: Kotak dialog prompt masukan nama pengguna pada Latihan 2.*  
+    ![Latihan 2 Prompt](screenshots/02a_latihan2_prompt.png)
+  - *Gambar 4.3: Kotak dialog alert salam dan pembaruan teks halaman Latihan 2.*  
+    ![Latihan 2 Alert](screenshots/02b_latihan2_alert.png)
+  - *Gambar 4.4: Kotak dialog alert peringatan saat masukan nama dibiarkan kosong.*  
+    ![Latihan 2 Kosong](screenshots/02c_latihan2_kosong.png)
 
 ---
 
@@ -194,11 +205,15 @@ Lab5Web/
   | `"-5"` | `-5` | `-5 < 0` | `"Input nilai tidak valid."` | Alert: `"Input nilai tidak valid."` | **LULUS** |
   | `"105"` | `105` | `105 > 100` | `"Input nilai tidak valid."` | Alert: `"Input nilai tidak valid."` | **LULUS** |
 
-> **Catatan Pengambilan Screenshot Dialog Native:**  
-> - *[Screenshot akan ditambahkan manual: `04a_latihan4_prompt.png` - Dialog input nilai]*
-> - *[Screenshot akan ditambahkan manual: `04b_latihan4_lulus.png` - Alert "Lulus" pada input 75]*
-> - *[Screenshot akan ditambahkan manual: `04c_latihan4_belum_lulus.png` - Alert "Belum lulus" pada input 40]*
-> - *[Screenshot akan ditambahkan manual: `04d_latihan4_tidak_valid.png` - Alert "Input nilai tidak valid."]*
+- **Tangkapan Layar:**
+  - *Gambar 4.6: Kotak dialog prompt masukan nilai pada Latihan 4.*  
+    ![Latihan 4 Prompt](screenshots/04a_latihan4_prompt.png)
+  - *Gambar 4.7: Kotak dialog alert "Lulus" saat input nilai 75.*  
+    ![Latihan 4 Lulus](screenshots/04b_latihan4_lulus.png)
+  - *Gambar 4.8: Kotak dialog alert "Belum lulus" saat input nilai 40.*  
+    ![Latihan 4 Belum Lulus](screenshots/04c_latihan4_belum_lulus.png)
+  - *Gambar 4.9: Kotak dialog alert peringatan input nilai tidak valid.*  
+    ![Latihan 4 Tidak Valid](screenshots/04d_latihan4_tidak_valid.png)
 
 ---
 
@@ -225,9 +240,11 @@ Lab5Web/
   | `"9"` | `default:` | `"Pilihan tidak tersedia"` | Alert: `"Pilihan tidak tersedia"` | **LULUS** |
   | `"x"` | `default:` | `"Pilihan tidak tersedia"` | Alert: `"Pilihan tidak tersedia"` | **LULUS** |
 
-> **Catatan Pengambilan Screenshot Dialog Native:**  
-> - *[Screenshot akan ditambahkan manual: `05a_latihan5_prompt.png` - Dialog prompt input angka 1-5]*
-> - *[Screenshot akan ditambahkan manual: `05b_latihan5_hasil.png` - Alert hasil "Bilangan tiga"]*
+- **Tangkapan Layar:**
+  - *Gambar 4.10: Kotak dialog prompt masukan angka 1–5 pada Latihan 5.*  
+    ![Latihan 5 Prompt](screenshots/05a_latihan5_prompt.png)
+  - *Gambar 4.11: Kotak dialog alert hasil pilihan angka 3 ("Bilangan tiga").*  
+    ![Latihan 5 Hasil](screenshots/05b_latihan5_hasil.png)
 
 ---
 
@@ -397,14 +414,14 @@ Mini project dirancang secara modular pada berkas `kalkulator.html` dan `kalkula
 3. **Pengendali Tampilan (*UI Controller*):** Fungsi `tampilkanHasil()` mengelola pembacaan form, pencetakan hasil ke Console, dan manipulasi elemen visual `#hasilKalkulator`.
 
 ### Rumus dan Skema Evaluasi
-- **Rumus Nilai Akhir:** $\text{Nilai Akhir} = (\text{Tugas} \times 30\%) + (\text{UTS} \times 30\%) + (\text{UAS} \times 40\%)$
+- **Rumus Nilai Akhir:** Nilai Akhir = (Tugas × 0,30) + (UTS × 0,30) + (UAS × 0,40)
 - **Tabel Predikat:**
-  - $\ge 85$: **A**
-  - $\ge 75$: **B**
-  - $\ge 60$: **C**
-  - $\ge 50$: **D**
-  - $< 50$: **E**
-- **Status Kelulusan:** Nilai Akhir $\ge 60$ dinyatakan **Lulus**, selain itu **Belum lulus**.
+  - A ≥ 85
+  - B ≥ 75
+  - C ≥ 60
+  - D ≥ 50
+  - E < 50
+- **Status Kelulusan:** Lulus jika nilai akhir ≥ 60, selain itu Belum lulus.
 
 ### Kode Program Utama (`kalkulator.js`):
 ```javascript
