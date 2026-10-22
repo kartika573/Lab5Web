@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Praktikum JavaScript</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="situs">
+    <h1>Pengenalan JavaScript</h1>
+    <p>Praktikum 5 Pemrograman Web: Kartika Juliana Sasongko (312310267), TI.25.1D</p>
+  </header>
+
+  <nav class="daftar" aria-label="Daftar latihan">
+    <a href="#l1">Latihan 1</a><a href="#l2">Latihan 2</a><a href="#l3">Latihan 3</a>
+    <a href="#l4">Latihan 4</a><a href="#l5">Latihan 5</a><a href="#l6">Latihan 6</a>
+    <a href="#l7">Latihan 7</a><a href="#l8">Latihan 8</a><a href="#mandiri">Eksperimen</a>
+    <a href="#tugas7">Tugas 7</a><a href="kalkulator.html">Mini Project</a>
+  </nav>
+
+  <main>
+    <!-- Latihan 1 -->
+    <section class="latihan" id="l1">
+      <h2>Latihan 1: Menampilkan output</h2>
+      <p class="tujuan">Teks di bawah diubah oleh JavaScript. Buka Console (F12) untuk melihat pesan yang sama.</p>
+      <p id="pesan">Konten awal.</p>
+    </section>
+
+    <!-- Latihan 2 -->
+    <section class="latihan" id="l2">
+      <h2>Latihan 2: Alert dan prompt</h2>
+      <p class="tujuan">Uji dengan mengisi nama, menekan Cancel, dan membiarkan input kosong.</p>
+      <button type="button" onclick="latihan2()">Jalankan Latihan 2</button>
+    </section>
+
+    <!-- Latihan 3 -->
+    <section class="latihan" id="l3">
+      <h2>Latihan 3: Function dan operasi aritmetika</h2>
+      <p class="tujuan">Hasil tampil di Console dan di halaman.</p>
+      <button type="button" onclick="latihan3Bawaan()">Jalankan operasiDasar(9, 4)</button>
+      <button type="button" class="sekunder" onclick="latihan3Prompt()">Input dua bilangan lewat prompt</button>
+      <div class="hasil" id="hasilOperasi"></div>
+    </section>
+
+    <!-- Latihan 4 -->
+    <section class="latihan" id="l4">
+      <h2>Latihan 4: Seleksi kondisi if-else</h2>
+      <p class="tujuan">Nilai minimal 60 dinyatakan lulus. Input nilai berupa string sehingga dikonversi dengan Number().</p>
+      <button type="button" onclick="latihan4()">Jalankan Latihan 4</button>
+    </section>
+
+    <!-- Latihan 5 -->
+    <section class="latihan" id="l5">
+      <h2>Latihan 5: Seleksi kondisi switch</h2>
+      <p class="tujuan">Masukkan angka 1 sampai 5 dan lihat nama bilangannya.</p>
+      <button type="button" onclick="latihan5()">Jalankan Latihan 5</button>
+    </section>
+
+    <!-- Latihan 6 -->
+    <section class="latihan" id="l6">
+      <h2>Latihan 6: Form bilangan genap atau ganjil</h2>
+      <p class="tujuan">Coba angka positif, negatif, nol, desimal, dan input kosong.</p>
+      <label for="bilangan">Masukkan bilangan bulat:</label>
+      <input type="number" id="bilangan" step="1">
+      <button type="button" onclick="cekBilangan()">Periksa</button>
+      <p id="hasilBilangan"></p>
+    </section>
+
+    <!-- Latihan 7 -->
+    <section class="latihan" id="l7">
+      <h2>Latihan 7: Mengubah warna halaman</h2>
+      <p class="tujuan">Satu function dengan parameter dipakai oleh tiga tombol.</p>
+      <button type="button" onclick="ubahWarnaLatar('lightgreen')">Latar Hijau</button>
+      <button type="button" onclick="ubahWarnaLatar('white')">Latar Putih</button>
+      <button type="button" onclick="ubahWarnaLatar('lightyellow')">Latar Kuning</button>
+    </section>
+
+    <!-- Latihan 8 (sudah ditambah 2 menu sesuai eksperimen mandiri no. 5) -->
+    <section class="latihan" id="l8">
+      <h2>Latihan 8: DOM dan checkbox menu makanan</h2>
+      <p class="tujuan">Total harga berubah otomatis saat pilihan dicentang atau dilepas.</p>
+      <h3>Daftar Menu Makanan</h3>
+      <label class="menu-item"><input type="checkbox" class="menu" value="5000"> Ayam Goreng (Rp5.000)</label>
+      <label class="menu-item"><input type="checkbox" class="menu" value="500"> Tempe (Rp500)</label>
+      <label class="menu-item"><input type="checkbox" class="menu" value="2500"> Telur Dadar (Rp2.500)</label>
+      <label class="menu-item"><input type="checkbox" class="menu" value="3000"> Nasi Putih (Rp3.000)</label>
+      <label class="menu-item"><input type="checkbox" class="menu" value="1500"> Es Teh Manis (Rp1.500)</label>
+      <p>Total: Rp<span id="total">0</span></p>
+    </section>
+
+    <!-- Eksperimen Mandiri -->
+    <section class="latihan" id="mandiri">
+      <h2>Eksperimen Mandiri</h2>
+      <p class="tujuan">Eksperimen no. 1 ada di Latihan 3 (tombol prompt) dan no. 5 di Latihan 8. Sisanya di bawah ini.</p>
+
+      <h3>No. 2: Tabel perkalian 7</h3>
+      <button type="button" onclick="tabelPerkalian(7)">Tampilkan tabel perkalian 7</button>
+      <div id="hasilTabel"></div>
+
+      <h3>No. 3: Function cekGenap(angka)</h3>
+      <label for="inputGenap">Angka:</label>
+      <input type="number" id="inputGenap" step="1">
+      <button type="button" onclick="uji_cekGenap()">Cek dengan cekGenap()</button>
+      <div class="hasil" id="hasilGenap"></div>
+
+      <h3>No. 4: Validasi kolom tidak boleh kosong</h3>
+      <label for="inputKota">Kota asal:</label>
+      <input type="text" id="inputKota">
+      <button type="button" onclick="validasiKosong()">Kirim</button>
+      <div class="hasil" id="hasilKosong"></div>
+
+      <h3>No. 6: Sembunyikan / tampilkan elemen</h3>
+      <button type="button" onclick="toggleElemen()" id="tombolToggle">Sembunyikan paragraf</button>
+      <p id="paragrafToggle">Paragraf ini dapat disembunyikan dan ditampilkan kembali dengan tombol di atas.</p>
+    </section>
+
+    <!-- Tugas 7 -->
+    <section class="latihan" id="tugas7">
+      <h2>Tugas 7: Validasi form nama dan nilai</h2>
+      <p class="tujuan">Nama tidak boleh kosong dan nilai harus berada pada rentang 0 sampai 100.</p>
+      <label for="namaTugas">Nama:</label>
+      <input type="text" id="namaTugas" autocomplete="off">
+      <label for="nilaiTugas">Nilai (0-100):</label>
+      <input type="number" id="nilaiTugas" step="any">
+      <button type="button" onclick="validasiForm()">Validasi</button>
+      <div class="hasil" id="hasilTugas"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Mini project kalkulator nilai ada di <a href="kalkulator.html">kalkulator.html</a>.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
